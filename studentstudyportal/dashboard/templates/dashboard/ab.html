@@ -1,0 +1,44 @@
+{% extends 'dashboard/base.html' %} 
+
+{% block content %}
+
+  {% block content_header %}
+    <h2>Steps</h2>
+    <p>
+      <a href="{% url 'upload_step' %}" class="btn btn-primary">Upload Step</a>
+    </p>
+  {% endblock %}
+
+  <table class="table mb-0">
+    <thead>
+      <tr>
+        <th>Gif File</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for step in steps %}
+        <tr>
+          <td>
+            {% if step.cover %}
+              <img src="{{ step.cover.url }}" alt="{{ step.title }}" style="width:500px;">
+            {% else %}
+              <span class="text-muted">No cover</span>
+            {% endif %}
+          </td>
+          <td>{{ step.title }}</td>
+          <td>{{ step.author }}</td>
+          
+          <td>
+            <form method="post" action="{% url 'delete_step' step.pk %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

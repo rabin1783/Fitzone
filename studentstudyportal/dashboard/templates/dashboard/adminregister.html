@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create User</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      *{
+        font-family: 'Quicksand', sans-serif; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        {% if success %}
+        <div class="alert alert-success" role="alert">
+            <h1>{{ success }}</h1>
+        </div>
+        {% elif error %}
+        <div class="alert alert-warning" role="alert">
+            <h1>{{ error }}</h1>
+        </div>
+        {% endif %}
+
+    <section style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('{% static 'images/back.webp' %}');"
+     class="hero is-dark is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div style="background-color: rgb(98, 98, 228);border-radius: 30px;" class="column is-5-tablet is-4-desktop is-3-widescreen">
+
+              <form method="POST" action="." class="box">
+                {% csrf_token %}
+
+                <h1 style="color: blue;font-family: bold;" class="has-text-centered mb-5 is-size-3">Admin Register</h1>
+
+                <div class="field">
+                  <label for="" class="label">First Name</label>
+                  <div class="control has-icons-left">
+                    {{ form.first_name }}
+                    <span class="icon is-small is-left">
+                      
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Middle Name</label>
+                    <div class="control has-icons-left">
+                      {{ form.middle_name }}
+                      <span class="icon is-small is-left">
+                        
+                      </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Last Name</label>
+                    <div class="control has-icons-left">
+                      {{ form.last_name }}
+                      <span class="icon is-small is-left">
+                        
+                      </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Email</label>
+                  <div class="control has-icons-left">
+                    {{ form.email }}
+                    <span class="icon is-small is-left">
+                      
+                    </span>
+                  </div>
+                </div>
+                
+                <div class="field">
+                  <label for="" class="label">Password</label>
+                  <div class="control has-icons-left">
+                    {{ form.password1 }}
+                    <span class="icon is-small is-left">
+                      
+                    </span>
+                  </div>
+                </div>
+
+                
+                <div class="field">
+                    <label for="" class="label">Contact</label>
+                    <div class="control has-icons-left">
+                      {{ form.contact }}
+                      <span class="icon is-small is-left">
+                        
+                      </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Date Of Birth</label>
+                    <div class="control has-icons-left">
+                      {{ form.dob }}
+                      <span class="icon is-small is-left">
+                        
+                      </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Address</label>
+                    <div class="control has-icons-left">
+                      {{ form.address }}
+                      <span class="icon is-small is-left">
+                        
+                      </span>
+                    </div>
+                </div>
+                
+                
+       
+                <div class="field">
+                  <button class="button is-success" type=submit>
+                    Signup
+                  </button>
+                </div>
+                <div class="field">
+                  Already registered ? <a href="{% url 'admin.login' %}">Login</a> 
+                </div>
+
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ </body>
+</html>

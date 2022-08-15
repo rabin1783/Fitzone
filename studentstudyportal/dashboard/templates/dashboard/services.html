@@ -1,0 +1,101 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+
+
+{% block content %}  
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 style="color: blue;font-family:bold;" class="fw-light">Our Services </h1>
+        <h3 style="color: blue;font-family:bold;" class="fw-light">We Serve For Your Fitness</h3>
+        <p class="lead text-muted"> This Website Includes Your Daily Exercise Step Guided By Professional </p>
+        <p class="lead text-muted">You can Add Your Own Step And Mark Your Daily Progress
+        </p>
+        <p class="lead text-muted">We have added Some Refreshment Site also For BreakTime
+        </p>
+        
+       
+      </div>
+    </div>
+  </section>
+   
+
+  <div class="album py-5 bg-light">
+    
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
+        
+        
+        
+
+        
+        
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="{% static 'images/gym.jpg' %}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p style="font-size:12px;color: blue;">Add Your Own Notes </p>
+              
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="{% static 'images/todo.jpg' %}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+
+            <div class="card-body">
+              <p style="font-size:12px;color: blue;">Plan Your Daily Exercise</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="{% static 'images/step.jpg' %}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p style="font-size:12px;color: blue;">Try These Step Daily</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="{% static 'images/conver.jpg' %}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+
+            <div class="card-body">
+              <p style="font-size:12px;color: blue;">Weight Converter</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 
+                </div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock content %}

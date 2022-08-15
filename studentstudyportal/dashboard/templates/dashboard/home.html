@@ -1,0 +1,175 @@
+{% extends 'dashboard/base.html' %}
+{% load static %} 
+{% load crispy_forms_tags %}
+
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/fitzone.css' %}">
+{% endblock %}
+
+
+
+
+
+
+
+
+<!-- header section ends-->
+
+
+
+{% block content %}
+
+
+<section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+
+        <div class="swiper-wrapper wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    
+                    <h3>FitZone</h3>
+                    <p>Complete Package About Your Fitness and Refreshment</p>
+                    <p>Now Maintain Your Body at Home</p>
+                    <a href="{% url 'notes' %}"><p class = "btn"> Review US</p></a>
+                    
+                </div>
+                <div class="ige">
+                    <img src="{% static 'images/fit.jpg' %}" alt="">
+                </div>
+            </div>
+
+            
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- dishes section starts  -->
+
+<section class="dishes" id="dishes">
+
+    
+    <h1 class="heading"> Our Services </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <a href="{% url 'notes' %}"><img class="bd-placeholder-img card-img-top" src="{% static 'images/gym.jpg' %}" alt="HTML tutorial"></a>
+            <h3>Daily Activities</h3>
+            <div class="stars">
+                <h1>Exercise This Step Daily at home</h1>
+            </div>
+            
+        </div>
+        <div class="box">
+            
+            <a href="{% url 'homework' %}"><img class="bd-placeholder-img card-img-top" src="{% static 'images/todo.jpg' %}" alt=""></a>
+            <h3>TO-DO Daily</h3>
+            <div class="stars">
+                <h1>Check Your Daily Task</h1>
+            </div>
+            
+        </div>
+
+        <div class="box">
+            
+            <a href="{% url 'step' %}"><img class="bd-placeholder-img card-img-top" src="{% static 'images/product.jpg' %}" alt=""></a>
+            <h3>Daily Exercise</h3>
+            <div class="stars">
+                <h1>Try These at Home</h1>
+            </div>
+            
+        </div>
+
+        <div class="box">
+            
+            <a href="{% url 'conversion' %}"><img class="bd-placeholder-img card-img-top" src="{% static 'images/conver.jpg' %}" alt=""></a>
+            <h3>Weight Conversion</h3>
+            <div class="stars">
+                <h1>Convert Your Weight into KG/Pound and ViseVersa</h1>
+            </div>
+            
+        </div>
+
+        
+
+        
+
+        
+
+    </div>
+
+</section>
+<section class="menu" id="menu">
+
+    <h3 class="sub-heading"> Lets Break </h3>
+    <h1 class="heading"> Refreshment Time </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <a href="{% url 'youtube' %}"><img class="bd-placeholder-img card-img-top" src="{% static 'images/youtube.webp' %}" alt=""></a>
+                
+            </div>
+            <div class="content">
+                
+                <h3>Youtube</h3>
+                <p>Search Your Exercise or any other video on Youtube</p>
+                
+                
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <a href="{% url 'books' %}"><img class="bd-placeholder-img card-img-top" src="{% static 'images/book.jpg' %}" alt=""></a>
+                
+            </div>
+            <div class="content">
+                
+                <h3>Book</h3>
+                <p>The more that you read, the more things you will know.</p>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="image">
+                <a href="{% url 'wiki' %}"><img class="bd-placeholder-img card-img-top" src="{% static 'images/wikipedia.jpg' %}" alt=""></a>
+                
+            </div>
+            <div class="content">
+                
+                <h3>Wikipedia</h3>
+                <p>Search in Wikipedia</p>
+                
+                
+                
+            </div>
+        </div>
+
+        
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,59 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+
+
+{% block custom_css %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+
+
+
+    
+    
+
+
+
+{% block content %}  
+	<div class="section">
+		<div class="container">
+			<div class="content-section">
+				<div class="title">
+					<h1>About Us</h1>
+				</div>
+				<div class="content">
+                    <h3 style="color:black ;">Make Yourself Fit</h3>
+					<h3 style="color:black ;">Come Train With US</h3>
+                    <p>This Website is Especially Designed To Train Yourself At Home</p>
+					<p>This Website Let You To add Your Daily Steps
+					</p>
+                    <p style="color: blue;margin-left: 180px;font-size: 25px;text-decoration-line: underline;font-family: bold;">For Enquiry:-
+					</p>
+                    <div>
+                        <div style="border-radius:30px;background-color: gray;margin-left: 90px;" class="content-section"><div><p style="font-family:bold;color: black;">contact no -123456789
+                        </p></div>
+                        <div><p style="font-family:bold;color: black;">email -xyz@gmail.com
+                        </p></div></div>
+                        
+                    </div>
+                    
+                    
+					
+				</div>
+				
+			</div>
+			<div class="image-section">
+				<img src="{% static 'images/about.jpg' %}">
+			</div>
+		</div>
+	</div>
+
+	
+
+
+
+
+{% endblock content %}

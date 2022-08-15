@@ -1,0 +1,134 @@
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(back.webp);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    font-size: 60px;
+    color:rgb(216, 91, 19);
+    font-family: bold;
+}
+h1:hover{
+    color: rgb(17, 182, 12);;
+}
+
+            .video-grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                column-gap: 26px;
+                row-gap: 50px;
+            }
+            .video-info-grid{
+                display: grid;
+                grid-template-columns: 50px 1fr;
+
+            }
+            .thumbnail{
+                padding-top: 30px;
+                width: 60%;
+                height: 140px;
+                
+                
+                
+            }
+            .thumbnail:hover{
+                
+            }
+            
+                
+        
+            .video-title{
+                color: antiquewhite;
+                margin-top: 0;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 20px;
+                margin-bottom: 12px;
+                
+            }
+            .video-author{
+                color: rgb(17, 182, 12);
+                font-size: 20px;
+            }
+            .video-stats{
+                background-color: blue;
+                
+                font-size: 16px;
+                position: absolute;
+                padding-left: 20px;
+                padding-top: 5px;
+                width: 140px;
+                height: 40px;
+                margin-left: 65px;
+                margin-top: 30px;
+                color: white;
+                
+                
+                transform: translate(-50%,-50%);
+                border: 1px solid;
+                border-radius: 20px;
+
+            
+            }
+            .video-stats:hover{
+                background-color: white;
+                color: blue;
+                
+                
+
+            }
+            .video-author{
+                margin-bottom: 4px;
+            }
+            
+            .channel-picture{
+                
+                vertical-align: top;
+                
+
+            }
+            .video-info{
+                
+
+            }
+            .profile-picture{
+                width: 50px;
+                border-radius: 40px;
+
+            }
+            .thumbnail-row{
+                margin-bottom: 12px;
+               
+                
+            }
+           
+            .payment{
+                
+                
+                font-size: 16px;
+                
+                padding-left: 20px;
+                padding-top: 5px;
+                
+                margin-left: 30px;
+                margin-top: 30px;
+                
+                
+                
+                
+                transform: translate(-50%,-50%);
+                border: 1px solid;
+                border-radius: 20px;
+
+                
+            }
+            
+                
+            
+            
+                
+                
+
+            
+        

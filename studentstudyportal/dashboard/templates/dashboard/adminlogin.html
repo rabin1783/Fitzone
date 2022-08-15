@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login_page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      *{
+        font-family: 'Quicksand', sans-serif; 
+      }
+    </style>
+  </head>
+  <body>
+    <div style="border-radius: 50px;" class="container">
+        {% if msg_success %}
+        <div class="alert alert-success" role="alert">
+            <h1>{{ msg_success }}</h1>
+        </div>
+        {% elif msg_error %}
+        <div class="alert alert-warning" role="alert">
+            <h1>{{ msg_error }}</h1>
+        </div>
+        {% endif %}
+    <div class="card">
+    
+
+    
+    <section style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('{% static 'images/back.webp' %}');
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    " class="hero is-dark is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+          
+            <div style="background-color: rgb(248, 161, 161);border-radius: 30px;" class="column is-5-tablet is-4-desktop is-3-widescreen">
+              <form method="POST" action="." class="box">
+                {% csrf_token %}
+
+                <h1 style="color: blue;font-family: bold;" class="has-text-centered mb-5 is-size-3">Admin Login</h1>
+
+                <div class="field">
+                  <label for="" class="label">Enter Your Email</label>
+                  <div class="control has-icons-left">
+                    {{ form.email }}
+                    <span class="icon is-small is-left">
+                      
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Password</label>
+                  <div class="control has-icons-left">
+                    {{ form.password1 }}
+                    <span class="icon is-small is-left">
+                      
+                    </span>
+                  </div>
+                </div>  
+
+                
+
+                <div class="field">
+                  <button class="button is-success" type="submit">
+                    Login
+                  </button>
+                </div>
+                
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ </body>
+</html>

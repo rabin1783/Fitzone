@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone</title>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class = "body">
+    
+    <div class="card">
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">FitZone</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'about' %}">ABOUT</a></li>
+                    <li><a href="{% url 'service' %}">SERVICE</a></li>
+                    
+                    <li><a href="{% url 'admin.login' %}">ADMIN LOGIN</a></li>
+                </ul>
+            </div>
+            
+
+            
+
+        </div> 
+        <div style="border-radius: 50px;" class="container">
+            {% if msg_success %}
+            <div class="alert alert-success" role="alert">
+                <h1>{{ msg_success }}</h1>
+            </div>
+            {% elif msg_error %}
+            <div class="alert alert-warning" role="alert">
+                <h1>{{ msg_error }}</h1>
+            </div>
+            {% endif %}
+        <div class="card">
+        
+
+            
+
+            
+
+        
+        <div class="content">
+            <h1>Fitness & <br><span>GYM Instruction </span></h1>
+            <p style="color: rgb(227, 248, 38);font-family: bold;" class="par">Physical fitness - the ability to carry out daily tasks easily and have<br> enough reserve energy  
+                to respond to unexpected demands
+                </p>
+                <p class="par">This Website Is Complete Guidance On Home Base Exercise  and Helps to Makes Plan</p>
+                <p class="par">Its Include Youtube,Books and Wikipedia too</p>
+                <button class="cn"><a href="#">Lets Begin</a></button>
+
+                <div class="form">
+                    <div>
+                        <h3>Click Below To Login</h3>
+                        <button class="btnn"><a href="{% url 'user.login' %}">Login</a></button>
+                    </div>
+                    <div>
+                        <h3>Don't have an account?</h3><br>
+                        <button class="btnn"><a href="{% url 'user.create' %}">Sign Up</a></button>
+                        
+                    
+                    
+
+                    
+                    
+
+                    
+
+                </div>
+                
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+</body>
+</html>
+
